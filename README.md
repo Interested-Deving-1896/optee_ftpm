@@ -1,44 +1,75 @@
-OP-TEE integration for the MS TPM 2.0 Reference Implementation (fTPM)
-===========
+[update-readmes]   Mode: rewrite — migrating to template structure...
+# optee_ftpm
 
-## fTPM TA
-The fTPM Trusted Application (TA) provides a secure firmware implementation
-of a TPM using the [MS reference
-implementation](https://github.com/microsoft/ms-tpm-20-ref).
+[![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/Interested-Deving-1896/optee_ftpm)
 
-The platform specific integration code is kept in this repository.
+<!-- AI:start:what-it-does -->
+_Description pending._
+<!-- AI:end:what-it-does -->
 
-This is a fork from the the [MS reference
-implementation](https://github.com/microsoft/ms-tpm-20-ref) sample
-[ARM32-FirmwareTPM](https://github.com/microsoft/ms-tpm-20-ref/tree/Historical_Samples/Samples/ARM32-FirmwareTPM)
-maintained to work with OP-TEE.
+## Architecture
 
-## Building the TA
+<!-- AI:start:architecture -->
+_Architecture documentation pending._
+<!-- AI:end:architecture -->
 
-This TA is built as described in [Trusted
-Applications](https://optee.readthedocs.io/en/latest/building/trusted_applications.html)
-section in the [OP-TEE
-documentation](https://optee.readthedocs.io/en/latest/index.html) with the
-addition of `CFG_MS_TPM_20_REF` which must hold the path to a checked out
-copy of the [MS TPM 2.0 Reference
-Implementation](https://github.com/microsoft/ms-tpm-20-ref).
-You need to checkout commit (98b60a44aba79b15fcce1c0d1e46cf5918400f6a) of [MS TPM 2.0 Reference
-Implementation](https://github.com/microsoft/ms-tpm-20-ref)
+## Install
 
-## Measured Boot support
-The fTPM Trusted Application includes support for Measured Boot. This
-feature allows the TA to read a TPM Event Log compatible with the
-specification in Section 5 of the [TCG EFI Protocol
-Specification](https://trustedcomputinggroup.org/wp-content/uploads/EFI-Protocol-Specification-rev13-160330final.pdf).
-The event log is read and extended during the TA initialization.
+<!-- Add installation instructions here. This section is yours — the AI will not modify it. -->
 
-Measure Boot support requires OP-TEE System Call
-```PTA_SYSTEM_GET_TPM_EVENT_LOG```.
+```bash
+git clone https://github.com/Interested-Deving-1896/optee_ftpm.git
+cd optee_ftpm
+```
 
-Flags related to Measured Boot support:
+## Usage
 
-`CFG_TA_MEASURED_BOOT`: Controls whether Measured Boot is enabled
-(`CFG_TA_MEASURED_BOOT=y`) or disabled (by default).
-`CFG_TA_EVENT_LOG_SIZE`: Maximum size in bytes allowed for the Event Log.
-Defaults to 1024 bytes.
+<!-- Add usage examples here. This section is yours — the AI will not modify it. -->
 
+## Configuration
+
+<!-- Document configuration options here. This section is yours — the AI will not modify it. -->
+
+## CI
+
+<!-- AI:start:ci -->
+_CI documentation pending._
+<!-- AI:end:ci -->
+
+## Mirror chain
+
+<!-- AI:start:mirror-chain -->
+This repo is maintained in [`Interested-Deving-1896/optee_ftpm`](https://github.com/Interested-Deving-1896/optee_ftpm) and mirrored through:
+
+```
+Interested-Deving-1896/optee_ftpm  ──►  OpenOS-Project-OSP/optee_ftpm  ──►  OpenOS-Project-Ecosystem-OOC/optee_ftpm
+```
+
+Changes flow downstream automatically via the hourly mirror chain in
+[`fork-sync-all`](https://github.com/Interested-Deving-1896/fork-sync-all).
+Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-Deving-1896`.
+<!-- AI:end:mirror-chain -->
+
+## Contributors
+
+<!-- AI:start:contributors -->
+_Contributors pending._
+<!-- AI:end:contributors -->
+
+## Origins
+
+<!-- AI:start:origins -->
+_Original project — no upstream fork._
+<!-- AI:end:origins -->
+
+## Resources
+
+<!-- AI:start:resources -->
+_No additional resource files found._
+<!-- AI:end:resources -->
+
+## License
+
+<!-- AI:start:license -->
+<!-- License not detected — add a LICENSE file to this repo. -->
+<!-- AI:end:license -->
